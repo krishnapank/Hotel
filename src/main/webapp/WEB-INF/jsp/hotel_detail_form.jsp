@@ -24,6 +24,18 @@
 	height:0px;
 
 }
+.offerThumb
+{
+ 	border: 1px solid #000000;
+    height: 95px;
+    margin: 1px 5px 0 0;
+}
+
+.banquetsThumbnails > li {
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
 </style>
 
  <style type="text/css">
@@ -79,6 +91,15 @@ ul.checkbox li.focus  {
     height: 90px;
     margin-left: 10px;
     width: 80px;
+  
+  }
+  
+    .offerFileDiv {
+    float: right;
+    height: 90px;
+    margin-left: 4px;
+    width: 80px;
+    margin-top: 0px;
   
   }
   .thumb {
@@ -230,7 +251,7 @@ ul.checkbox li.focus  {
 	<div class="control-group">	
     <label class="control-label" for="category">Hotel Category</label>
     <div class="controls">  
- <select id="hotelCategory" placeholder="Hotel Category" name="hotelCategory">
+ <select id="hotelCategory" placeholder="Hotel Category" name="hotelCategory" style="width:206px;">
 <option>Luxury Resort</option>
 <option>Business Hotel</option>
 <option>Leisure Hotel</option>
@@ -247,7 +268,7 @@ ul.checkbox li.focus  {
     <label class="control-label" for="rating">Star Rating</label>
     <div class="controls">
   
- <select id="rating" placeholder="Star Rating" name="rating">
+ <select id="rating" placeholder="Star Rating" name="rating" style="width:206px;">
 <option>5 Star</option>
 <option>4 Star</option>
 <option>3 Star</option>
@@ -655,7 +676,7 @@ ul.checkbox li.focus  {
     		<label  for="hotelbanquets">Banquets and Conference Facilities</label>
   		</div>
   			<div class="row">
-		<div class="span20">
+		<div class="span10">
   		<div class="banquet_detail_class">
   			<ul class="thumbnails" style="float:right;">
   			<c:forEach items="${banquetDetailBeans}" var="item" varStatus="status">  
@@ -752,203 +773,131 @@ ul.checkbox li.focus  {
     </div>
 	 
 	 <!-- offer select one starts -->
-   <div class="form-inline" style="padding-left:80px;  padding-top:10px;">
-
- <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails" style="height:0px;">
-			 	
-				<li>	<input type="file" id="offerfile1" name="offerImageFile1"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span0" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist1"></ul></div>
-<!-- </div> -->
-</li>
-</ul>
-	 <!-- offer select two starts -->
-  <!--  <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile2" name="offerImageFile2"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail2" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist2"></ul></div>
-<!-- </div> -->
-</li>
-</ul>
-
-
- <ul class="thumbnails">
- <li>
-	 <!-- offer select three starts -->
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile3" name="offerImageFile3"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail3" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist3"></ul></div>
-		
-<!-- </div>
- -->
-
-</li>
-</ul>
-
-	 <!-- offer select four starts -->
-  <!--  <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
- <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile4" name="offerImageFile4"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail4" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist4"></ul></div>
-<!-- </div> -->
-</li>
-</ul>
-
-	 <!-- offer select five starts -->
-  <!--  <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile5" name="offerImageFile5"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail5" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist5"></ul></div>
-<!-- </div> -->
-
-</li>
-</ul>
-
-	 <!-- offer select six starts -->
-   <!-- <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile6" name="offerImageFile6"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail6" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist6"></ul></div>
-<!-- </div> -->
-
-</li>
-</ul>
-	 <!-- offer select seven starts -->
-   <!-- <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile7" name="offerImageFile7"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail7" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist7"></ul></div>
-<!-- </div> -->
-</li>
-</ul>
-	 <!-- offer select eight starts -->
-   <!-- <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile8" name="offerImageFile8"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail8" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist8"></ul></div>
-		
-		</li>
-		</ul>
-<!-- </div> -->
-
-	 <!-- offer select nine starts -->
-<!--    <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile9" name="offerImageFile9"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail9" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist9"></ul></div>
-		
-		</li>
-		</ul>
-<!-- </div> -->
-
-	 <!-- offer select ten starts -->
-<!--    <div class="form-inline" style="padding-left:50px;  padding-top:10px;"> -->
-
-  <ul class="thumbnails">
- <li>
- 	<div class="span7">
-			<ul class="thumbnails">
-			 	
-				<li>	<input type="file" id="offerfile10" name="offerImageFile10"  value="Browse" placeholder="Offer Image">
-				 <input type="text" class="input-append" id="offerdetail10" placeholder="Offer Detail"/>  
-				</li>
-			</ul>
-		</div>
-		<div class="span1" style="padding-top:0px;"> <ul class="thumbnails" id="offerlist10"></ul></div>
-
-</li>
-</ul>
+   <div class="form-horizontal" style="padding-left:80px;  padding-top:10px;">
+<div class="controls-row">
+ 	
+ <div class="span8">
+ 	    				    <input type="file" id="offerfile1" name="offerImageFile1"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail1" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist1" class="offerFileDiv" ></div>
+				</div>
+	
 </div>
-<!--  <input type="text" class="input-append" id="offers1" placeholder="Upload Image">   <input type="button"  value="Browse">  -->
-<!--  <input type="file" id="offerfiles" name="file"  value="Browse" />
-   <output id="offerfileslist"></output>  
-  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail">    -->
-<!--   </div>	 -->
- 
- 
-<!--    <div class="form-inline" style="padding-left:50px;  padding-top:10px;">
- 
- <input type="text" class="input-append" id="offers2" placeholder="Upload Image">   <input type="button"  value="Browse"> 
- <input type="text" class="input-append" id="offerdetail2" placeholder="Offer Detail">    </div>	 -->
+
+<div class="span6">
+ 	    				    <input type="file" id="offerfile2" name="offerImageFile2"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail2" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist2" class="offerFileDiv" ></div>
+				</div>
+		
+		</div>
+ </div>
+
+<div class="controls-row" style="padding-top: 25px;">
+ 	
+ <div class="span8">
+ 	    				    <input type="file" id="offerfile3" name="offerImageFile3"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail1" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist3" class="offerFileDiv" ></div>
+				</div>
+	
+</div>
+
+<div class="span6">
+ 	    				    <input type="file" id="offerfile4" name="offerImageFile4"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail2" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist4" class="offerFileDiv" ></div>
+				</div>
+		
+		</div>
+ </div>
+
+
+<div class="controls-row" style="padding-top: 25px;">
+ 	
+ <div class="span8">
+ 	    				    <input type="file" id="offerfile5" name="offerImageFile5"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail1" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist5" class="offerFileDiv" ></div>
+				</div>
+	
+</div>
+
+<div class="span6">
+ 	    				    <input type="file" id="offerfile6" name="offerImageFile6"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail2" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist6" class="offerFileDiv" ></div>
+				</div>
+		
+		</div>
+ </div>
+
+
+
+<div class="controls-row" style="padding-top: 25px;">
+ 	
+ <div class="span8">
+ 	    				    <input type="file" id="offerfile7" name="offerImageFile7"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail1" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist7" class="offerFileDiv" ></div>
+				</div>
+	
+</div>
+
+<div class="span6">
+ 	    				    <input type="file" id="offerfile8" name="offerImageFile8"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail2" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist8" class="offerFileDiv" ></div>
+				</div>
+		
+		</div>
+ </div>
+
+
+<div class="controls-row" style="padding-top: 25px;">
+ 	
+ <div class="span8">
+ 	    				    <input type="file" id="offerfile9" name="offerImageFile9"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail1" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist9" class="offerFileDiv" ></div>
+				</div>
+	
+</div>
+
+<div class="span6">
+ 	    				    <input type="file" id="offerfile10" name="offerImageFile10"  value="Browse" placeholder="Offer Image">
+				<!--  <input type="text" class="input-append" id="offerdetail1" placeholder="Offer Detail"/>   -->
+				  <div style="padding-top:10px; float:left;">
+				   <textarea style="width: 294px; height: 100px; " cols="200" rows="100" id="offerdetail2" name="sports" placeholder="Offer Detail"></textarea>
+				  <div id="offerlist10" class="offerFileDiv" ></div>
+				</div>
+		
+		</div>
+ </div>
+
+
 	
 	<!-- div for hotel images offers end-->
 
-<div class="form-inline" style="padding-top:50px;padding-left:500px;" align="center" >
+<div class="form-inline" style="padding-top:50px;padding-left:350px;" align="center" >
 
 	<ul class="thumbnails">
 			<li>
@@ -1118,17 +1067,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist1').innerHTML = "";
-	          document.getElementById('offerlist1').appendChild(filediv);
+	          document.getElementById('offerlist1').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1142,7 +1091,6 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
   
   function offerFileSelect2(evt) {
 	    var files = evt.target.files; // FileList object
@@ -1163,17 +1111,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist2').innerHTML = "";
-	          document.getElementById('offerlist2').appendChild(filediv);
+	          document.getElementById('offerlist2').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1187,10 +1135,10 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  function offerFileSelect3(evt) {
+
+
+
+function offerFileSelect3(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1209,17 +1157,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist3').innerHTML = "";
-	           document.getElementById('offerlist3').appendChild(filediv);
+	          document.getElementById('offerlist3').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1233,11 +1181,9 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  
-  function offerFileSelect4(evt) {
+
+
+function offerFileSelect4(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1256,17 +1202,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist4').innerHTML = "";
-	          document.getElementById('offerlist4').appendChild(filediv);
+	          document.getElementById('offerlist4').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1280,10 +1226,10 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  function offerFileSelect5(evt) {
+
+
+
+function offerFileSelect5(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1302,17 +1248,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist5').innerHTML = "";
-	          document.getElementById('offerlist5').appendChild(filediv);
+	          document.getElementById('offerlist5').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1326,11 +1272,11 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  
-  function offerFileSelect6(evt) {
+
+
+
+
+function offerFileSelect6(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1349,17 +1295,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist6').innerHTML = "";
-	          document.getElementById('offerlist6').appendChild(filediv);
+	          document.getElementById('offerlist6').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1373,10 +1319,12 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  function offerFileSelect7(evt) {
+
+
+
+
+
+function offerFileSelect7(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1395,17 +1343,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist7').innerHTML = "";
-	          document.getElementById('offerlist7').appendChild(filediv);
+	          document.getElementById('offerlist7').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1419,10 +1367,11 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  
-  
-  function offerFileSelect8(evt) {
+
+
+
+
+function offerFileSelect8(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1441,17 +1390,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist8').innerHTML = "";
-	          document.getElementById('offerlist8').appendChild(filediv);
+	          document.getElementById('offerlist8').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1465,8 +1414,12 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  function offerFileSelect9(evt) {
+
+
+
+
+
+function offerFileSelect9(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1485,17 +1438,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist9').innerHTML = "";
-	          document.getElementById('offerlist9').appendChild(filediv);
+	          document.getElementById('offerlist9').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1509,8 +1462,11 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
-  function offerFileSelect10(evt) {
+
+
+
+
+function offerFileSelect10(evt) {
 	    var files = evt.target.files; // FileList object
 	    f = files[0];
 
@@ -1529,17 +1485,17 @@ $(document).ready( function() {
 	        return function(e) {
 	          // Render thumbnail.
 	          var filespan = document.createElement('span');
-	          var filediv = document.createElement('li');
+	          var filediv = document.createElement('div');
 	          filespan.innerHTML = theFile.name;
 	          var imgspan = document.createElement('span');
-	          imgspan.innerHTML = ['<img class="thumb" src="', e.target.result,
+	          imgspan.innerHTML = ['<img class="offerThumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
-	          filediv.appendChild(imgspan);
+	         // filediv.appendChild(imgspan);
 	          //filediv.appendChild(filespan);
-	          filediv.setAttribute("class", "fileDiv");
+	          //filediv.setAttribute("class", "fileDiv");
 	        //  alert(theFile.name);
 	           document.getElementById('offerlist10').innerHTML = "";
-	          document.getElementById('offerlist10').appendChild(filediv);
+	          document.getElementById('offerlist10').appendChild(imgspan);
 	          
 	          var object = {};
 	          object.filename = theFile.name;	          
@@ -1553,7 +1509,8 @@ $(document).ready( function() {
 	      reader.readAsDataURL(f);
 	   // }
 	  }
-  
+	  
+	  
   var otherHotelsImages = [];
   var hotelMainImages = [];
   var hotelOfferImages = [];
