@@ -268,16 +268,16 @@ ul.checkbox li.focus  {
 	
 	<!-- div for check in time start-->
 	
-		
+<!-- 		
 	     <div class="input-append bootstrap-timepicker">
             <input id="timepicker1" type="text" class="input-small" style="height: 30px;">
             <span class="add-on"><i class="icon-time"></i></span>
-     </div>
+     </div> -->
 		    <div class="span8">	
 	
 
      
-	<div>
+	<div class="control-group">
 	
     <label class="control-label" for="intime">Check In Time</label>
    <!--  <div class="controls">	   -->  
@@ -326,16 +326,18 @@ ul.checkbox li.focus  {
 	<!-- div for cechk out time start-->
 			    <div class="span8">	
 	
-	<div>
+	<div class="control-group">
 	
     <label class="control-label" for="outtime">Check Out Time</label>
-    <!-- <div class="controls"> -->
-      <div class="input-append bootstrap-timepicker" style="padding-left: 20px;">
-            <input id="timepicker1" type="text" class="input-small" style="height: 30px;">
+<!--     <div class="controls"> -->
+    
+         <div class="input-append bootstrap-timepicker" style="padding-left: 20px;">
+            <input id="timepicker2" type="text" class="input-small" style="height: 30px;">
             <span class="add-on"><i class="icon-time"></i></span>
-     </div>
-  
- <!-- <select id="outtime" name="outTime"  placeholder="Check Out Time">
+<!--      </div> -->
+ 
+<!--   
+ <select id="outtime" name="outTime"  placeholder="Check Out Time">
 <option>00</option>
 <option>01</option>
 <option>02</option>
@@ -362,7 +364,7 @@ ul.checkbox li.focus  {
 <option>23</option>
 <option>24</option>
 </select> -->
-  <!--   </div>	 -->
+    </div>	
     </div>
 	</div>
 	
@@ -494,16 +496,23 @@ ul.checkbox li.focus  {
 	<!-- created separate div for facilities options--> 
 	
 	<div class="row-fluid">
-    	<div class="span9" >	
+    	<div class="span12" >	
 			<!-- div for facilities start-->
 			<div class="control-group">
     			<label class="control-label" for="facilities">Facilities</label>
+    			<!-- <p class="pull-left">Payment Types</p> -->
   				<div class="controls">
+  				<ul class="thumbnails" style="float:left;">
 					<c:forEach items="${hotelFacilities}" var="item" varStatus="status">
+					<li style="width: 200px;margin-bottom:1px;margin-left:-2px;" >	
 						<label class="checkbox inline">
-							<input type="checkbox" id="facilityType${item.id}" name="facilityType[]" class="facilities_Checkbox" value="${item.facilityType}" > ${item.facilityType}
+						
+						<input type="checkbox" id="facilityType${item.id}" name="facilityType[]" class="facilities_Checkbox" value="${item.facilityType}" > ${item.facilityType}
+ 						
  						</label>
+ 						</li>
 					</c:forEach>
+					</ul>
    				</div>
    			</div>
 			<!-- div for  facilities end-->
@@ -540,7 +549,9 @@ ul.checkbox li.focus  {
   		<label class="control-label" for="hotelrestaurants">Hotel Restaurants</label>
 	</div>
 	<div class="restaurant_detail_class">
+	<ul class="thumbnails" style="float:left;">
 		<c:forEach items="${restaurantDetailBeans}" var="item" varStatus="status">
+		<li >
 	   		<div class="form-inline" style="padding-left:50px;">	
 			<!-- div for bed type start-->
 		
@@ -549,7 +560,11 @@ ul.checkbox li.focus  {
 		    	<input type="text"  class="input-append restype" id="resTyep${item.id}" name="resType[]" 
 		    		placeholder="Cusine Type (indian,Chinese)" value="${item.type}">	
 		  		<label>Open From  </label>  
-				<select id="openFrom${item.id}" name="openFrom[]" class="openfrom" style="width:auto;">
+		  		         <div class="input-append bootstrap-timepicker" style="padding-left: 2px;">
+            <input id="openFrom${item.id}" name="openFrom[]"  type="text" class="input-small"  style="height: 30px;" onclick="openFrom(this);">
+            <span class="add-on"><i class="icon-time"></i></span>
+            </div>
+		<%-- 		<select id="openFrom${item.id}" name="openFrom[]" class="openfrom" style="width:auto;">
 					<option>00</option>
 					<option>01</option>
 					<option>02</option>
@@ -575,10 +590,15 @@ ul.checkbox li.focus  {
 					<option>22</option>
 					<option>23</option>
 					<option>24</option>
-				</select>
+				</select> --%>
 		
 		  		<label>Till  </label>  
-				<select id="till${item.id}"  name="till[]" class="tillfrom" style="width:auto;">
+		  		
+		  				         <div class="input-append bootstrap-timepicker" style="padding-left: 2px;">
+            <input id="till${item.id}"  name="till[]"  type="text" class="input-small"  style="height: 30px;">
+            <span class="add-on"><i class="icon-time"></i></span>
+            </div>
+	<%-- 			<select id="till${item.id}"  name="till[]" class="tillfrom" style="width:auto;">
 					<option>00</option>
 					<option>01</option>
 					<option>02</option>
@@ -604,7 +624,7 @@ ul.checkbox li.focus  {
 					<option>22</option>
 					<option>23</option>
 					<option>24</option>
-				</select>
+				</select> --%>
 	
 	    		<label>Reservations</label>  
 	 			<input  style="width:150x;" type="text" id="restNo${item.id}" name="restNo[]" class="restno"
@@ -613,7 +633,9 @@ ul.checkbox li.focus  {
 				<input class="input-small" type="text" id="restExtNo${item.id}" name="restExtNo[]" class="restextno" 
 					placeholder="Ext." value="${item.restaurants_resv_ext}">				
 			</div>
+			</li>
 		</c:forEach>	
+		</ul>
 	</div>
 	
 
@@ -775,8 +797,19 @@ $(document).ready( function() {
 );
 </script>
 
-       <script type="text/javascript">
+ <script type="text/javascript">
+ function openFrom(obj)
+ {
+	 alert("jhiihih");
+ 	alert("jhiihih"+obj);
+ 	$(obj).timepicker();
+ }
             $('#timepicker1').timepicker();
+            $('#timepicker2').timepicker();
+           
+            
+           
+            
 </script>
 
 <script>
