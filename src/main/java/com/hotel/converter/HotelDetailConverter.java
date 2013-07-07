@@ -3,10 +3,13 @@
  */
 package com.hotel.converter;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import com.hotel.bean.UIHotelDetailBean;
+import com.hotel.bean.UIPaymentTypeBean;
 import com.hotel.entity.HotelBanquetDetail;
 import com.hotel.entity.HotelBedTypeDetail;
 import com.hotel.entity.HotelDetail;
@@ -73,6 +76,70 @@ public class HotelDetailConverter {
 		hotelDetail.setFacilites(facilites);		
 		
 		return hotelDetail;
+	}
+	
+	public static UIHotelDetailBean getUIHotelDetailBean(HotelDetail ht) {
+	
+		UIHotelDetailBean uIHotelDetailBean =new UIHotelDetailBean();
+		uIHotelDetailBean.setHotelName(ht.getHotelName());
+		uIHotelDetailBean.setAddress(ht.getAddress());
+		uIHotelDetailBean.setCity(ht.getCity());
+		uIHotelDetailBean.setState(ht.getState());
+		uIHotelDetailBean.setCountry(ht.getCountry());
+		uIHotelDetailBean.setZipCode(ht.getZipCode());
+		uIHotelDetailBean.setHotelPhoneNumber(ht.getPhoneNumber());
+		uIHotelDetailBean.setHotelFaxNumber(ht.getFaxNumber());
+		uIHotelDetailBean.setEmail(ht.getState());
+		uIHotelDetailBean.setWebsite(ht.getWebSiteUrl());
+		uIHotelDetailBean.setReservations(ht.getHotelReservations());
+		uIHotelDetailBean.setTheCheckIn(ht.getCheckOutType());
+		uIHotelDetailBean.setAirportName(ht.getAirportName());
+		uIHotelDetailBean.setRailwayName(ht.getRailwayStationName());
+		uIHotelDetailBean.setTubeName(ht.getTubeStationName());
+		uIHotelDetailBean.setToReach(ht.getDirection());
+		
+		//right side of data
+		uIHotelDetailBean.setHotelCategory(ht.getHotelCategory());
+		uIHotelDetailBean.setRating(ht.getRating());
+		uIHotelDetailBean.setDescription(ht.getDescription());
+		uIHotelDetailBean.setInTime(ht.getCheckIntime());
+		uIHotelDetailBean.setOutTime(ht.getCheckOuttime());
+		uIHotelDetailBean.setContactPerson(ht.getContactPersonName());
+		uIHotelDetailBean.setAirportCode(ht.getAirportCode());
+		uIHotelDetailBean.setBusStation(ht.getBusStationName());
+		uIHotelDetailBean.setTaxiStand(ht.getTaxiStandName());
+		
+		
+		// middle body data
+		ArrayList payTypeList = new ArrayList ();
+		payTypeList.addAll(ht.getPaymentTypes());		
+		uIHotelDetailBean.setPaymentTypes(payTypeList);
+		
+		ArrayList facilityTypeList = new ArrayList ();
+		facilityTypeList.addAll(ht.getFacilites());		
+		uIHotelDetailBean.setFacilities(facilityTypeList);
+		
+		ArrayList bedTypeList = new ArrayList ();
+		bedTypeList.addAll(ht.getBedTypes());		
+		uIHotelDetailBean.setBedTypes(bedTypeList);
+		
+		ArrayList restaurantTypeList = new ArrayList ();
+		restaurantTypeList.addAll(ht.getRestaurants());		
+		uIHotelDetailBean.setRestaurants(restaurantTypeList);
+		
+		ArrayList banquetsTypeList = new ArrayList ();
+		banquetsTypeList.addAll(ht.getBanquets());		
+		uIHotelDetailBean.setBanquets(banquetsTypeList);
+		
+		
+		uIHotelDetailBean.setSports(ht.getSports());
+		// hotel images
+		//uIHotelDetailBean.setHotelMainImageFileData(ht.getH);
+		
+		return uIHotelDetailBean;
+		
+		
+		
 	}
 
 }

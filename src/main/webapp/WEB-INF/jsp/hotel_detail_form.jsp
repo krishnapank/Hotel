@@ -699,9 +699,6 @@ ul.checkbox li.focus  {
 
 
 
-
-
-
 <hr color="#000000">
 	<!-- div for sports start-->
 	

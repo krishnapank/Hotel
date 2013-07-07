@@ -56,7 +56,7 @@ public class HotelController {
 	
 	@Autowired
 	private ServletContext servletContext;
-	
+	String relativeWebPath = "/WEB-INF/uploads";
 	
 	@RequestMapping("/add.do")
 	public String doForward1(Map<String, Object> map) {
@@ -101,7 +101,7 @@ public class HotelController {
 
 			String hotelImageDir = hotelDetail.getHotelName().replaceAll("[-+^:,\"\\s]", "_")+"_"+hotelDetail.getId();
 			
-			String relativeWebPath = "/WEB-INF/uploads";
+			
 			String absoluteFilePath = servletContext.getRealPath(relativeWebPath);
 			
 			String mainImage = absoluteFilePath + "/" + hotelImageDir + "/main_image/";
@@ -214,18 +214,16 @@ public class HotelController {
 	
 		Long i = 1L;
 		HotelDetail ht = hotelDetailService.getHotelDetailsById(i);
-		ht.setHotelName(ht.getHotelName());
-		ht.setAddress(ht.getAddress());
-		ht.setCity(ht.getCity());
-		ht.setState(ht.getState());
+		UIHotelDetailBean uIHotelDetailBean =  HotelDetailConverter.getUIHotelDetailBean(ht);
 		
-		map.put("hotelDetail", ht);
+		
+		map.put("uIHotelDetailBean", uIHotelDetailBean);
 		//return modelAndView;
 		
 		//ModelAndView mvHotel = new ModelAndView("hotelDetail");
 		//mvHotel.addObject("hotelDetail", carManager.getCarList());
 
-		return "/hotelView.jsp";
+		return "hotel_view";
 		
 	}
 	 
